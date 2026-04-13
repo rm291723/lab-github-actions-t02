@@ -19,15 +19,11 @@ jobs:
         run: echo "Construyendo la aplicación..."
 
   test:
-    name: Test
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Checkout código
-        uses: actions/checkout@v4
+    - name: Simular tests fallidos
+      run: |
+        echo "Ejecutando tests..."
+        exit 1
 
-      - name: Simular tests
-        run: echo "Ejecutando tests..."
 
   deploy:
     name: Deploy
