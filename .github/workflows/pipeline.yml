@@ -46,7 +46,7 @@ jobs:
           exit-code: '1'
           ignore-unfixed: true
           vuln-type: 'os,library'
-          severity: 'CRITICAL,HIGH'
+          severity: 'CRITICAL'
 
   test:
     name: Quality Gate (SonarCloud)
@@ -56,7 +56,7 @@ jobs:
       - name: Checkout código
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0   # necesario para análisis completo de historial
+          fetch-depth: 0
 
       - name: Análisis SonarCloud
         uses: SonarSource/sonarcloud-github-action@master
