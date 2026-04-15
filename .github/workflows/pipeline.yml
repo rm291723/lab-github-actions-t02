@@ -21,6 +21,13 @@ jobs:
           context: .
           push: false
           tags: lab-github-actions:${{ github.sha }}
+      - name: Imprimir contexto
+        run: |
+          echo "SHA: ${{ github.sha }}"
+          echo "Branch: ${{ github.ref_name }}"
+          echo "Evento: ${{ github.event_name }}"
+          echo "Actor: ${{ github.actor }}"
+          echo "Runner OS: ${{ runner.os }}"
 
   scan:
     name: Scan de seguridad (Trivy)
