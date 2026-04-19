@@ -1,5 +1,5 @@
 # Todo el repositorio requiere revisión de estos usuarios
-rm291723
+*   @rm291723
 
-# Workflows de CI/CD requieren revisión del equipo de infraestructura
-.github/workflows/   rm291723
+# Workflows de CI/CD requieren revisión
+.github/workflows/   @rm291723
